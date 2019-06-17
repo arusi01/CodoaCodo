@@ -17,7 +17,12 @@ public class JUN13_Foreach_Nombre_Edad {
             System.out.print("Ingrese edad [" + (i + 1) + "]: ");
             edad[i] = sc.nextInt();
         }
-        for (String sunum : nombre) {   //FOREACH
-            System.out.println("Nombre: " + sunum);
+        System.out.println("");
+        System.out.println("Datos Ingresados: ");
+        int index = 0;
+        for (String sunom : nombre) {   //FOREACH
+            System.out.println(sunom+ " su edad es "+edad[index]);
+            index++;
         }
     }
+}
