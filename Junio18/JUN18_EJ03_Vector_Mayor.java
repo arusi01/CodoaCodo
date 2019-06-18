@@ -17,7 +17,7 @@ public class JUN18_EJ03_Vector_Mayor {
     public static int mayor(int edad[], int LARGO) {
         int mayor = edad[0];
         int posicion = 0;
-        for (int i = 0; i < LARGO; i++) {
+        for (int i = 1; i < LARGO; i++) {
             if (edad[i] > mayor) {
                 mayor = edad[i];
                 posicion = i;
