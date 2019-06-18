@@ -27,17 +27,16 @@ public class JUN18_EJ02_Sueldos {
 
     public static void ordenaSueldo() {
         double aux;
-        for (int pasada = 0; pasada < sueldo.length - 1; pasada++) {
-            for (int posicion = pasada; posicion < sueldo.length - 1; posicion++) {
-                for (int posicion2 = 0; posicion2 < sueldo.length - posicion - 1; posicion2++) {
-                    if (sueldo[posicion2] > sueldo[posicion2 + 1]) {
-                        aux = sueldo[posicion2];
-                        sueldo[posicion2] = sueldo[posicion2 + 1];
-                        sueldo[posicion2 + 1] = aux;
-                    }
+        for (int posicion = 0; posicion < sueldo.length - 1; posicion++) {
+            for (int posicion2 = 0; posicion2 < sueldo.length - posicion - 1; posicion2++) {
+                if (sueldo[posicion2] > sueldo[posicion2 + 1]) {
+                    aux = sueldo[posicion2];
+                    sueldo[posicion2] = sueldo[posicion2 + 1];
+                    sueldo[posicion2 + 1] = aux;
                 }
             }
         }
+
     }
 
     public static void imprimirSueldo() {
