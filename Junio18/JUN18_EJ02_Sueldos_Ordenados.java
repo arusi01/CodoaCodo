@@ -2,7 +2,7 @@ package cfp10;
 
 import java.util.Scanner;
 
-public class JUN18_EJ02_Sueldos {
+public class JUN18_EJ02_Sueldos_Ordenados {
 
     static double sueldo[] = new double[5];
 
