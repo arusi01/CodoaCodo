@@ -9,7 +9,7 @@ public class JUN27_Banco {
         System.out.println("Datos Ingresados: ");
         int index = 0;
         for (int nrocta : numero) {   //FOREACH
-            System.out.println("Cuenta Numero: " + nrocta + "\tTipo: " + tipo[index] + "\tSaldo: " + saldo[index]);
+            System.out.println("Nro. de Cuenta: " + nrocta + "\tTipo: " + tipo[index] + "\tSaldo: " + saldo[index]);
             index++;
         }
     }
@@ -29,9 +29,9 @@ public class JUN27_Banco {
 
         }
         if (encontrado) {
-            System.out.println("Cuenta Encontrada");
+            System.out.println("\nCUENTA ENCONTRADA");
         } else {
-            System.out.println("Cuenta NO Encontrada");
+            System.out.println("\nCUENTA NO ENCONTRADA");
         }
     }
     
@@ -81,11 +81,20 @@ public class JUN27_Banco {
             System.out.print("Saldo [" + (i + 1) + "]: ");
             saldo[i] = sc.nextFloat();
         }
-        
-        mostrarCtas(numero,tipo,saldo);
+
+        mostrarCtas(numero, tipo, saldo);
         buscarCta(numero);
-        ordenarCtas(numero,tipo,saldo);
-        mostrarCtas(numero,tipo,saldo);        
+
+        System.out.println("");
+        String confirm = "";
+        do {
+            System.out.print("Desea Ordenar las cuentas por numero (s/n): ");
+            confirm = sc.next();
+        } while (!confirm.equalsIgnoreCase("s") && !confirm.equalsIgnoreCase("n"));
+        if (confirm.equalsIgnoreCase("s")) {
+            ordenarCtas(numero, tipo, saldo);
+            mostrarCtas(numero, tipo, saldo);
+        }
 
     }
 }
