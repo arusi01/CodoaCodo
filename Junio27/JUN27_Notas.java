@@ -87,7 +87,7 @@ public class JUN27_Notas {
         System.out.print(tituloln);
 
         int fin;
-        if (inicio == 0) {
+        if (inicio < 0) {
             fin = legajo.length;
         }else{
             fin=inicio+1;
@@ -128,7 +128,7 @@ public class JUN27_Notas {
         float nota[][] = new float[largovector][cantnotas];
 
         ingresarDatos(legajo, sexo, nota);
-        mostrarDatos(legajo, sexo, nota,0);
+        mostrarDatos(legajo, sexo, nota,-1);
 
         System.out.println("");
         String confirm = "";
