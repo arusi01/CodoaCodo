@@ -88,6 +88,7 @@ public class JUN27_Notas {
 
         int fin;
         if (inicio < 0) {
+            inicio=0;
             fin = legajo.length;
         }else{
             fin=inicio+1;
