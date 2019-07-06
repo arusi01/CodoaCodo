@@ -2,7 +2,7 @@ package cfp10;
 
 import java.util.Scanner;
 
-public class UN06_EJ01_array {
+public class UN06_EJ01_Array {
 
     public static void main(String[] args) {
         
@@ -15,15 +15,12 @@ public class UN06_EJ01_array {
         System.out.println("");
         
         for (int posicion=0; posicion < vector.length; posicion++) {
-
             System.out.print("Ingrese Numero ["+(posicion+1)+"]: ");
             vector[posicion] = sc.nextInt();            
-            
         }
         System.out.println("");
         for (int posicion=0; posicion < vector.length; posicion++) {
         System.out.println("Nº"+(posicion+1)+" ingresado: "+vector[posicion]);
         }
-    }
-    
+    }  
 }
