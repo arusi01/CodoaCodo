@@ -1,24 +1,25 @@
-package JUN02_Perro;
+package JUN02_Remeras;
 
 public class NewMain {
 
     public static void main(String[] args) {
-
-        Perro foxterrier = new Perro();
-        Perro Doberman = new Perro();
-        Perro Salchicha = new Perro();
+        Remeras tomy = new Remeras();
         
-        foxterrier.color="Blanco y Negro";
-        foxterrier.edad=3;
-        foxterrier.raza="terrier";
-        foxterrier.tamaño="grande";
-
-        foxterrier.mostrar();        
-        foxterrier.comer();
-        foxterrier.correr();
-        foxterrier.dormir();
-        foxterrier.ladrido();
-                
+        tomy.color="blanca";
+        tomy.descripcion="manga corta";
+        tomy.precio=450;
+        tomy.talle="XL";
+        
+        tomy.mostrar();
+        
+        tomy.color="Marron";
+        tomy.descripcion="manga larga";
+        tomy.precio=530;
+        tomy.talle="L";
+        
+        tomy.mostrar();
+        
+        
     }
     
 }
