@@ -22,6 +22,10 @@ public class Main {
         for(int i=0; i < lista.size(); i++){
             Integer datos = lista.get(i);
             System.out.println("N°: "+datos);
+            
+            if (lista.get(i).equals(5)) {
+                System.out.println("5 Encontrado en posicion: "+i);
+            }
         }
     }
     
