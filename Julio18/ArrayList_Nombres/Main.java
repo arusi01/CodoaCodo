@@ -10,7 +10,8 @@ public class Main {
 
         lista.add("Alberto");
         lista.add("Carlos");
-        lista.add("Pepe");
+        lista.add(1,"Pepe"); // AGREGA EN POSICION
+        lista.add("Analia");
 
         System.out.println("Largo de la lista: " + lista.size() + "\n");
 
