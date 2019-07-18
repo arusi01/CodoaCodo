@@ -27,6 +27,14 @@ public class Main {
                 System.out.println("5 Encontrado en posicion: "+i);
             }
         }
+        
+        System.out.println("\nN°: "+lista);
+        
+        for(int i=0; i < lista.size(); i++){
+            if (lista.get(i).equals(7)) {
+                lista.remove(i);
+            }
+        }
+        System.out.println("\nN°: "+lista);        
     }
-    
 }
