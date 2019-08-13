@@ -27,12 +27,14 @@ public class Persona {
         for (int i = 0; i < 2; i++) {
 
             Scanner teclado = new Scanner(System.in);
+            
+            System.out.println("\nIngrese los datos Persona "+i);
 
-            System.out.print("Ingrese su nombre: ");
+            System.out.print("Nombre: ");
             String nombre = teclado.next();
-            System.out.print("Ingrese su apellido: ");
+            System.out.print("Apellido: ");
             String apellido = teclado.next();
-            System.out.print("Ingrese su edad: ");
+            System.out.print("Edad: ");
             int edad = teclado.nextInt();
 
             Persona pers = new Persona(nombre, apellido, edad);
