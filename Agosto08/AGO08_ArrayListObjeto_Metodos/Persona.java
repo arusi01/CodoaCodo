@@ -22,7 +22,7 @@ public class Persona {
         this.edad = edad;
     }
     
-    public static void cargarLista(List<Persona> persona) {
+    public void cargarLista(List<Persona> persona) {
 
         for (int i = 0; i < 2; i++) {
 
