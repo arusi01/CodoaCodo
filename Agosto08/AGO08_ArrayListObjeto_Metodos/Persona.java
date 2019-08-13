@@ -11,6 +11,7 @@ public class Persona {
     private String apellido;
     private int edad;
 
+    // Constructor vacio por defecto
     public Persona() {
     }
 
@@ -43,6 +44,16 @@ public class Persona {
     
     public List<Persona> mostrar(List<Persona> persona) {
           return persona;
+    }
+    
+                                              // nombre lista
+    public List<Persona> remover(List<Persona> persona, String nombre) {
+        for (int i = 0; i < persona.size(); i++) {
+            if (persona.get(i).getNombre().equals(nombre)) {
+                persona.remove(i);
+            }
+        }
+        return persona;
     }
     
     public String getNombre() {
