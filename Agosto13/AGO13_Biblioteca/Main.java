@@ -24,12 +24,14 @@ public class Main {
         int codLibro=teclado.nextInt();
         ejemplar.eliminarLibro(listaLibros, codLibro);
         
+        System.out.print("\nLibros:");
         List<Biblioteca> mostrar = ejemplar.mostrarLibros(listaLibros);
         for (int i = 0; i < mostrar.size(); i++) {
             Biblioteca get = mostrar.get(i);
-            System.out.println("\nCodigo Libro: " + get.getCodigoLibro()
+            System.out.println("Codigo Libro: " + get.getCodigoLibro()
                     + " N Estante: " + get.getNunEstante()
-                    + " Nombre Libro: " + get.getNombreLibro());
+                    + " Nombre Libro: " + get.getNombreLibro()
+                    + " Precio: " + get.getPrecioLibro());
         }
         
         System.out.println("\nIngrese el codigo del libro a buscar: ");
@@ -43,5 +45,15 @@ public class Main {
         } else {
             System.out.println("\nLibro NOOOO Encontrado.");
         }
+
+        System.out.print("\nLibros ordenados por precio:");
+        List<Biblioteca> ordenar = ejemplar.ordenarPrecio(listaLibros);
+        for (int i = 0; i < ordenar.size(); i++) {
+            Biblioteca get = ordenar.get(i);
+            System.out.println("Codigo Libro: " + get.getCodigoLibro()
+                    + " N Estante: " + get.getNunEstante()
+                    + " Nombre Libro: " + get.getNombreLibro()
+                    + " Precio: " + get.getPrecioLibro());
+        } 
     }
 }
