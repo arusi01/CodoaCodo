@@ -17,7 +17,7 @@ public class Main {
         ejemplar.cargarEstante(listaLibros);
         
         Object objMay=new Object();
-        objMay=ejemplar.mostrarMayorPrecio(listaLibros).getPrecio();
+        objMay=ejemplar.mostrarMayorPrecio(listaLibros).getPrecioLibro();
         System.out.println("\nLibro con mayor precio: "+objMay);
         
         System.out.println("\nIngrese el codigo del libro a eliminar: ");
