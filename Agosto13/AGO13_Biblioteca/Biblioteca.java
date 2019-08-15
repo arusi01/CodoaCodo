@@ -94,13 +94,15 @@ public class Biblioteca {
     }
 
     public List<Biblioteca> encontrarLibro(List<Biblioteca> libro, int codigo) {
+        int encontrado=0;
         for (int i = 0; i < libro.size(); i++) {
             if (libro.get(i).getCodigoLibro() == codigo) {
-                 System.out.println("\nLibro Encontrado.    1");
-            }else{
-                 System.out.println("\nLibro NOOO Encontrado.   1");
-
-            }
+                 System.out.println("\nMetodo 1: Libro Encontrado.");
+                 encontrado=1;
+            }            
+        }
+        if (encontrado==0){
+            System.out.println("\nMetodo 1: Libro NOOO Encontrado.");
         }
         return libro;
     }
@@ -123,5 +125,23 @@ public class Biblioteca {
             }
         }
         return mayor;        
+    }
+    
+    public List<Biblioteca> ordenarPrecio(List<Biblioteca> libro) {
+        
+        Biblioteca aux = null;
+    
+        for (int pasada = 0; pasada < libro.size() - 1; pasada++) {        
+            for (int posicion = pasada; posicion < libro.size() - 1; posicion++) {
+                for (int posicion2 = 0; posicion2 < libro.size() - posicion - 1; posicion2++) {
+                    if (libro.get(posicion2).getPrecioLibro() > libro.get(posicion2+1).getPrecioLibro()) {
+                        aux = libro.get(posicion2);
+                        libro.set(posicion2, libro.get(posicion2+1));
+                        libro.set(posicion2+1, aux);
+                    }
+                }
+            }
+        }
+        return libro;
     }
 }
