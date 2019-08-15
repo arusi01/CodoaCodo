@@ -62,7 +62,7 @@ public class Biblioteca {
 
         for (int i = 0; i < tamanio; i++) {
 
-            System.out.println("\nIngrese los datos del libro " + i);
+            System.out.println("\nIngrese los datos del libro N." + i);
 
             System.out.print("Codigo ISBN: ");
             int codigoLibros = teclado.nextInt();
@@ -144,4 +144,47 @@ public class Biblioteca {
         }
         return libro;
     }
+    
+    public List<Biblioteca> ordenarNombre(List<Biblioteca> libro) {
+        
+        boolean intercambio=false;
+        Object aux;
+        for (int i = 0; i < libro.size(); i++) {
+            intercambio=false;
+            for (int j = libro.size()-1; j > i ; j--) {
+                if (libro.get(j).getNombreLibro().compareTo(libro.get(j-1).getNombreLibro()) < 0) {
+                    aux=libro.get(j);
+                    libro.set(j, libro.get(j-1));
+                    libro.set(j-1, (Biblioteca) aux);
+                    intercambio=true;
+                }
+            }
+            if (!intercambio){
+                break;
+                
+            }
+        }
+        return libro;
+    }
+       public List<Biblioteca> ordenarPrecio2(List<Biblioteca> libro) {
+        
+        boolean intercambio=false;
+        Object aux;
+        for (int i = 0; i < libro.size(); i++) {
+            intercambio=false;
+            for (int j = libro.size()-1; j > i ; j--) {
+                if (libro.get(j).getPrecioLibro() > libro.get(j-1).getPrecioLibro()) {
+                    aux=libro.get(j);
+                    libro.set(j, libro.get(j-1));
+                    libro.set(j-1, (Biblioteca) aux);
+                    intercambio=true;
+                }
+            }
+            if (!intercambio){
+                break;
+                
+            }
+        }
+        return libro;
+    }    
 }
