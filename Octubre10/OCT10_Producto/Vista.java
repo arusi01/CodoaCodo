@@ -231,6 +231,7 @@ public class Vista extends javax.swing.JFrame {
         fila = Tabla.getSelectedRow();
         if (fila >= 0) {
             modelo.removeRow(fila);
+            lista.remove(fila);
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
