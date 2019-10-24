@@ -72,3 +72,23 @@ primary key(cod_especie)
 select * from especies;
 
 desc especies;
+
+-- ************************ cuarto ejemplo
+
+use primeratabla; -- ingresar a la base de datos
+
+update administradores set nombre='Popo' where id_administrador=1;
+
+select * from administradores;
+
+-- ************************ quinto ejemplo
+
+use primeratabla; -- ingresar a la base de datos
+
+delete from administradores where id_administrador=2;
+
+delete from administradores where nombre='daniel'; -- no lo borra solo lo borra con primary key
+
+delete from administradores where id_administrador=3;
+
+select * from administradores;
