@@ -33,3 +33,42 @@ select * from administrador;
 
 insert into administrador (id_administrador,nombre,telefono)
 value (1,'Pepe','12345');
+
+-- ************************ TERCER EJEMPLO
+
+use primeratabla; -- ingresar a la base de datos
+
+create table administradores(
+id_administrador int not null auto_increment,
+nombre varchar(45) not null,
+telefono varchar(45) not null,
+primary key(id_administrador)
+);
+
+select * from administradores;
+
+insert into administradores (nombre,telefono)
+value ('Pepe','12345');
+
+insert into administradores (nombre,telefono)
+value ('Daniel','42520000');
+
+desc administradores;
+
+
+-- ************************ Ejercicio
+
+use primeratabla; -- ingresar a la base de datos
+
+create table especies(
+cod_especie varchar(30) not null,
+nombre_especie varchar(20) not null,
+tipo varchar(10) not null,
+periodos_migratorios varchar(30),
+caracteristicasgenerales varchar(30) not null,
+primary key(cod_especie)
+);
+
+select * from especies;
+
+desc especies;
