@@ -39,3 +39,15 @@ end $
 call borrar(2);
 
 select * from usuario;
+
+-- ***************** TERCER EJEMPLO
+
+delimiter $
+create procedure actualizar(in id int, in nom varchar(150), in ape varchar(150))
+begin
+update usuario set nombre=nom, apellido=ape where id_usuario=id;
+end $
+
+call actualizar(1,'Daniel','Escada');
+
+select * from usuario;
