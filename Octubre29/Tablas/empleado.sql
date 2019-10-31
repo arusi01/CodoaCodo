@@ -20,3 +20,17 @@ area_trabajo varchar(45) not null,
 titulo varchar(45) not null
 );
 
+create table productos(
+id_producto int auto_increment primary key,
+nombre_producto varchar(45),
+tipo_producto varchar(45) not null,
+precio_producto varchar(45) not null
+);
+
+create table adminstradores(
+id_administrador int auto_increment primary key,
+nombre_administrador varchar(45) not null,
+area_laboral varchar(45) not null,
+telefono_adminstrador varchar(45) not null,
+correo_administrador varchar(45) not null
+);
