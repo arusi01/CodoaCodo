@@ -34,3 +34,10 @@ area_laboral varchar(45) not null,
 telefono_adminstrador varchar(45) not null,
 correo_administrador varchar(45) not null
 );
+
+create table emp_prod(
+id_tipo int,
+id_producto int,
+foreign key(id_tipo) references empleado(id_tipo),
+foreign key(id_producto) references productos(registro)
+);
