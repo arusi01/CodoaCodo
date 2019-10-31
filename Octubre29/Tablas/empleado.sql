@@ -36,8 +36,8 @@ correo_administrador varchar(45) not null
 );
 
 create table emp_prod(
-id_tipo int,
-id_producto int,
+id_tipo int primary key,
+id_producto int primary key,
 foreign key(id_tipo) references empleado(id_tipo),
 foreign key(id_producto) references productos(registro)
 );
