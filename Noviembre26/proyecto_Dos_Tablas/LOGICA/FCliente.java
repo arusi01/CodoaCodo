@@ -19,7 +19,7 @@ public class FCliente {
         sSQL="insert into personas(nombre,apaterno,amaterno,tipo_documento,num_documento,direccion,telefono,email) "
                 + "values(?,?,?,?,?,?,?,?);";
         sSQL2="insert into cliente(idpersona,codigo_cliente) "
-                + "values((select from personas order by idpersona desc limit 1),?);";
+                + "values((select idpersona from personas order by idpersona desc limit 1),?);";
         try {
             PreparedStatement pst = cn.prepareStatement(sSQL); //persona
             PreparedStatement pst2 = cn.prepareStatement(sSQL2); //cliente  
